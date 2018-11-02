@@ -1,5 +1,5 @@
 # Glissile
-**Glissile** is a macro for generating GLSL source code.
+**Glissile** will be a macro for generating GLSL source code.
 
 ## License
 
