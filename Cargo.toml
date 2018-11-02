@@ -1,0 +1,10 @@
+[package]
+name = "glissile"
+version = "0.1.0"
+authors = ["vonforum <vonforum@windowslive.com>"]
+edition = "2018"
+
+[lib]
+proc_macro = true
+
+[dependencies]
