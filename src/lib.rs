@@ -1,6 +1,13 @@
-extern crate proc_macro;
+pub mod num;
+mod util;
+pub mod vec;
 
-#[proc_macro]
-pub fn glsl(input: proc_macro::TokenStream) -> proc_macro::TokenStream {
-    ((format!(r#""{}""#, input)).as_str()).parse().unwrap()
-}
+pub use num::*;
+pub use vec::*;
+
+pub const DEFAULT_RESOLUTION: i64 = u16::MAX as i64 + 1;
+
+pub type Fx32 = Fx32Var<DEFAULT_RESOLUTION>;
+pub type FxVec2 = FxVecVar2<DEFAULT_RESOLUTION>;
+pub type FxVec3 = FxVecVar3<DEFAULT_RESOLUTION>;
+pub type FxVec4 = FxVecVar4<DEFAULT_RESOLUTION>;

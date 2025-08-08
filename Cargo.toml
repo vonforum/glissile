@@ -1,15 +1,17 @@
 [package]
 name = "glissile"
-description = "A macro for generating GLSL source code"
-repository = "https://github.com/vonforum/glissile"
+description = "A basic glam-compatible fixed-point math library"
 version = "0.1.0"
-authors = ["vonforum <vonforum@windowslive.com>"]
-edition = "2018"
+edition = "2024"
 license = "MIT OR Apache-2.0"
-keywords = ["glsl", "gl"]
-categories = ["development-tools", "rendering"]
+repository = "https://github.com/vonforum/glissile"
 
-[lib]
-proc_macro = true
+[features]
+bevy_math = ["dep:bevy_math", "glam"]
+glam = ["dep:glam"]
+serde = ["dep:serde"]
 
 [dependencies]
+bevy_math = { path = "../../../bevy/crates/bevy_math", optional = true }
+glam = { version = "0.30.5", optional = true }
+serde = { version = "1.0", features = ["derive"], optional = true }
