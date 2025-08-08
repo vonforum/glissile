@@ -5,6 +5,9 @@ version = "0.1.0"
 edition = "2024"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/vonforum/glissile"
+keywords = ["glam", "fixed-point", "math", "bevy"]
+categories = ["game-development", "game-engines"]
+readme = "README.md"
 
 [features]
 bevy_math = ["dep:bevy_math", "glam"]
