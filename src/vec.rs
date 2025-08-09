@@ -329,6 +329,7 @@ impl<const N: i64> From<FxVecVar4<N>> for (Fx32Var<N>, Fx32Var<N>, Fx32Var<N>, F
 	}
 }
 
+#[cfg(any(feature = "glam", feature = "bevy_math"))]
 macro_rules! impl_conversion {
 	($glam: ty, $name: ty, $($axis: ident),+) => {
 		impl<const N: i64> From<$name> for $glam {
